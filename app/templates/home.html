@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+</style>
+
+
+<section id="home" class="relative h-screen w-full overflow-hidden">
+  <!-- Background Image -->
+  <img
+    src="https://c4.wallpaperflare.com/wallpaper/873/898/353/bottle-sailor-bottle-world-sailing-ship-wallpaper-preview.jpg"
+    alt="Plastic Background" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/40 z-10"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-20 flex flex-col justify-center items-start h-full text-left text-white px-4 md:px-20 pt-20 md:pt-0">
+
+    <!-- Subheading -->
+    <span class="text-sm md:text-base uppercase tracking-widest text-yellow-400 mb-2">
+      High-Quality & Reliable
+    </span>
+
+    <!-- Main Heading -->
+    <h1
+      class="text-4xl md:text-6xl font-extrabold mb-4 border-l-4 border-yellow-400 pl-4 leading-tight hover:text-red-500"
+      data-aos="fade-right">
+      Welcome to <span class="text-red-500 hover:text-white">AA Plastics</span>
+    </h1>
+
+    <!-- Decorative line (optional) -->
+    <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
+
+    <!-- Paragraph -->
+    <p class="text-lg md:text-xl max-w-2xl text-justify text-gray-100 mb-6">
+      AA Plastics is a trusted name in high-quality plastic manufacturing, delivering durable and sustainable
+      plastic solutions for various industries across India. Our passion for precision and innovation makes us a top
+      choice for clients nationwide.
+    </p>
+
+    <!-- Call to Action -->
+    <a href="#contact"
+      class="bg-red-500 hover:bg-white text-white hover:text-red-500 px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300"
+      data-aos="fade-right">
+      Get in Touch
+    </a>
+  </div>
+</section>
+
+
+
+<section id="about" class="bg-black text-white py-20 px-6 md:px-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+    <!-- Left Side Image -->
+    <div class="w-full md:w-1/2">
+      <div class="relative rounded-lg overflow-hidden shadow-lg">
+        <img src="https://cdn.pixabay.com/photo/2017/10/06/04/42/water-bottle-2821977_1280.jpg"
+          alt="AA Plastics Factory" data-aos="fade-right" class="w-full h-auto object-center" />
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
+    </div>
+
+    <!-- Right Side Content -->
+    <div class="w-full md:w-1/2 relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 mb-6 text-red-500 hover:text-white"
+        data-aos="fade-right">About <span class="text-white hover:text-red-500">Us</span></h2>
+      <p class="text-justify leading-relaxed mb-4">
+        Established in ….(year)…., A.A. Plastics has been a trusted name in the plastic manufacturing industry for
+        nearly two decades.
+        From day one, our journey has been marked by exceptional service, unwavering quality, and the incredible support
+        of our valued customers — our extended brotherhood.
+      </p>
+      <p class="text-justify leading-relaxed mb-4">
+        Our growth has been nothing short of phenomenal. Like a silkworm transforming into a magnificent butterfly, we
+        have evolved from a humble beginning into a prominent force in the industry.
+        The golden key to our success lies in our commitment to flexibility in customization, consistency in quality,
+        and on-time delivery — every time.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="services" class="relative bg-black text-white py-22 px-6 md:px-20 overflow-hidden">
+  <!-- Background -->
+  <img src="https://theberkey.com/cdn/shop/articles/What_numbers_of_plastic_are_safe_for_water_bottles_The_Numbers_Behind_Water_Bottles_7322ff32-7d9b-4b12-a5d7-cfa930dc4124_1024x1024.jpg?v=1739619362"
+    alt="Plastic Manufacturing Background"
+    class="absolute inset-0 w-full h-full object-cover opacity-20 z-0" />
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-md z-0"></div>
+
+  <!-- Title -->
+  <div class="relative z-10 text-center max-w-4xl mx-auto mb-16">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-red-500 hover:text-white">
+      Our <span class="text-white hover:text-red-500">Services</span>
+    </h2>
+
+    <p class="mt-4 text-gray-300 text-lg">
+      Delivering innovation in plastic manufacturing with precision, speed, and sustainability.
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="relative z-10 grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-5">
+    <!-- Service Card -->
+    <div
+      class="group bg-white/5 border border-white/10 hover:border-yellow-400 rounded-2xl p-8 shadow-xl backdrop-blur-md transition-all hover:scale-[1.03] duration-300 hover:shadow-yellow-500/30">
+      <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-400 text-3xl mb-5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+        <i class="fas fa-cogs"></i>
+      </div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Custom Plastic Molding</h3>
+      <p class="text-gray-300">Tailor-made solutions for high-precision industrial components with unmatched durability.</p>
+    </div>
+
+    <div
+      class="group bg-white/5 border border-white/10 hover:border-yellow-400 rounded-2xl p-8 shadow-xl backdrop-blur-md transition-all hover:scale-[1.03] duration-300 hover:shadow-yellow-500/30">
+      <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-400 text-3xl mb-5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+        <i class="fas fa-box-open"></i>
+      </div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Bottling & Packaging</h3>
+      <p class="text-gray-300">Industry-grade bottling and packaging optimized for hygiene, safety, and shelf-appeal.</p>
+    </div>
+
+    <div
+      class="group bg-white/5 border border-white/10 hover:border-yellow-400 rounded-2xl p-8 shadow-xl backdrop-blur-md transition-all hover:scale-[1.03] duration-300 hover:shadow-yellow-500/30">
+      <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-400 text-3xl mb-5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+        <i class="fas fa-industry"></i>
+      </div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Bulk Production</h3>
+      <p class="text-gray-300">High-efficiency large-scale production with quality control at every step.</p>
+    </div>
+
+    <div
+      class="group bg-white/5 border border-white/10 hover:border-yellow-400 rounded-2xl p-8 shadow-xl backdrop-blur-md transition-all hover:scale-[1.03] duration-300 hover:shadow-yellow-500/30">
+      <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-400 text-3xl mb-5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+        <i class="fas fa-sitemap"></i>
+      </div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Injection Molding</h3>
+      <p class="text-gray-300">Top-tier injection molding for scalable and complex product needs.</p>
+    </div>
+
+    <div
+      class="group bg-white/5 border border-white/10 hover:border-yellow-400 rounded-2xl p-8 shadow-xl backdrop-blur-md transition-all hover:scale-[1.03] duration-300 hover:shadow-yellow-500/30">
+      <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-400 text-3xl mb-5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+        <i class="fas fa-pencil-ruler"></i>
+      </div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Custom Design & Prototyping</h3>
+      <p class="text-gray-300">From CAD designs to prototypes – we build your ideas into real, testable products.</p>
+    </div>
+
+    <div
+      class="group bg-white/5 border border-white/10 hover:border-yellow-400 rounded-2xl p-8 shadow-xl backdrop-blur-md transition-all hover:scale-[1.03] duration-300 hover:shadow-yellow-500/30">
+      <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-500/10 text-yellow-400 text-3xl mb-5 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+        <i class="fas fa-recycle"></i>
+      </div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Eco-Friendly Alternatives</h3>
+      <p class="text-gray-300">Sustainable plastic manufacturing with recycled and biodegradable materials.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="why-choose-us" class="relative bg-gray-100 text-white py-20 px-6 md:px-20">
+  <div class="relative z-10 max-w-7xl mx-auto text-center mb-16">
+    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 inline-block text-black hover:text-red-500">
+      Why <span class="text-red-500 hover:text-black">Choose Us</span>
+    </h2>
+    <p class="mt-4 max-w-2xl mx-auto text-black text-lg">
+      We go beyond plastic – we deliver excellence, innovation, and value that lasts.
+    </p>
+  </div>
+
+  <!-- Grid of Image Overlay Cards -->
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Card -->
+    <div class="relative h-72 rounded-xl overflow-hidden shadow-lg group">
+      <img src="https://thumbs.dreamstime.com/b/advanced-machinery-operating-battery-pack-manufacturing-process-high-tech-facility-battery-pack-manufacturing-process-323132696.jpg" alt="Advanced Machinery"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-300"></div>
+      <div class="absolute bottom-0 p-6">
+        <h3 class="text-xl font-semibold text-yellow-400">Advanced Machinery</h3>
+        <p class="text-sm text-gray-200 mt-2">Cutting-edge equipment ensures high precision and faster production.</p>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="relative h-72 rounded-xl overflow-hidden shadow-lg group">
+      <img src="https://thumbs.dreamstime.com/b/quality-control-assurance-industry-standards-concept-virtual-screen-quality-control-assurance-industry-standards-concept-138637649.jpg" alt="Quality Assurance"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-300"></div>
+      <div class="absolute bottom-0 p-6">
+        <h3 class="text-xl font-semibold text-yellow-400">Quality Assurance</h3>
+        <p class="text-sm text-gray-200 mt-2">Every product is checked to meet stringent quality standards.</p>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="relative h-72 rounded-xl overflow-hidden shadow-lg group">
+      <img src="https://t4.ftcdn.net/jpg/12/75/54/11/360_F_1275541158_fOOEHhbbZDvGFHZSLVGpV6rqnWPhn3FP.jpg" alt="On-Time Delivery"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-300"></div>
+      <div class="absolute bottom-0 p-6">
+        <h3 class="text-xl font-semibold text-yellow-400">On-Time Delivery</h3>
+        <p class="text-sm text-gray-200 mt-2">We value your time with timely dispatches and streamlined logistics.</p>
+      </div>
+    </div>
+
+    <!-- Add more cards below as needed -->
+  </div>
+</section>
+
+
+
+<section id="testimonials" class="bg-black text-white py-20 px-6 md:px-20">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 inline-block text-red-500 hover:text-white">
+      Testimonials
+    </h2>
+    <p class="mt-4 max-w-2xl mx-auto text-gray-300 text-lg">
+      Our clients love working with us. Here's what they have to say.
+    </p>
+  </div>
+
+  <div class="overflow-x-auto scrollbar-hide">
+    <div class="flex space-x-6 min-w-max px-2 py-4">
+      {% for i in "1234567" %}
+      <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 min-w-[300px] w-[300px] transition duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://randomuser.me/api/portraits/men/{{ forloop.counter }}5.jpg"
+            alt="Client {{ forloop.counter }}" class="w-14 h-14 rounded-full border-2 border-yellow-400" />
+          <div>
+            <h3 class="text-lg font-semibold text-yellow-400">Client {{ forloop.counter }}</h3>
+            <p class="text-sm text-gray-400">Business Owner</p>
+          </div>
+        </div>
+        <p class="text-gray-300 text-sm text-justify">
+          "AA Plastics exceeded our expectations with their quality and timely delivery. Highly recommended for bulk orders."
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}AA Plastics{% endblock %}</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- fevicon -->
+  <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+</head>
+
+<style>
+  body {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body class="pt-[95px] bg-white text-black overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header id="navbar"
+    class="fixed top-0 left-0 w-full z-50 bg-black/70 text-white shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
+
+      <!-- Left Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="{% url 'home' %}" class="hover:text-red-400 transition">Home</a>
+        <a href="{% url 'about' %}" class="hover:text-red-400 transition">About</a>
+        <a href="{% url 'services' %}" class="hover:text-red-400 transition">Services</a>
+      </nav>
+
+      <!-- Logo -->
+      <a href="{% url 'home' %}" class="flex-shrink-0">
+        <img src="{% static 'images/logo.png' %}" class="h-16" alt="AA Plastics Logo" />
+      </a>
+
+      <!-- Right Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="{% url 'products' %}" class="hover:text-red-400 transition">Products</a>
+        <a href="{% url 'gallery' %}" class="hover:text-red-400 transition">Gallery</a>
+        <a href="{% url 'contact' %}" class="hover:text-red-400 transition">Contact</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <div class="md:hidden">
+        <button id="mobile-btn">
+          <i id="hamburger-icon" class="fas fa-bars text-white text-2xl transition"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-in Mobile Menu -->
+  <!-- Slide-in Mobile Menu -->
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-64 bg-black text-white z-[999] transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col pt-10 space-y-6 px-6">
+
+    <!-- Close Button -->
+    <button id="close-btn" class="absolute top-8 right-4 text-white text-2xl hover:text-red-400 transition">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <a href="{% url 'home' %}" class="hover:text-red-400 text-lg mt-10">Home</a>
+    <a href="{% url 'about' %}" class="hover:text-red-400 text-lg">About</a>
+    <a href="{% url 'services' %}" class="hover:text-red-400 text-lg">Services</a>
+    <a href="{% url 'products' %}" class="hover:text-red-400 text-lg">Products</a>
+    <a href="{% url 'gallery' %}" class="hover:text-red-400 text-lg">Gallery</a>
+    <a href="{% url 'contact' %}" class="hover:text-red-400 text-lg">Contact</a>
+  </div>
+
+
+  <!-- Floating Buttons -->
+  <div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+      class="bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition">
+      <i class="fab fa-whatsapp text-xl"></i>
+    </a>
+
+    <!-- Call -->
+    <a href="tel:+919876543210" class="bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 transition">
+      <i class="fas fa-phone-alt text-xl"></i>
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="bg-gray-900  text-white">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="space-y-4">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="h-16">
+        <p class="text-sm text-gray-400">Delivering quality products and services with excellence and innovation.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="{% url 'home' %}" class="hover:text-red-400">Home</a></li>
+          <li><a href="{% url 'about' %}" class="hover:text-red-400">About</a></li>
+          <li><a href="{% url 'services' %}" class="hover:text-red-400">Services</a></li>
+          <li><a href="{% url 'products' %}" class="hover:text-red-400">Products</a></li>
+          <li><a href="{% url 'gallery' %}" class="hover:text-red-400">Gallery</a></li>
+          <li><a href="{% url 'contact' %}" class="hover:text-red-400">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>Email: <a href="mailto:info@example.com" class="hover:text-red-400">info@example.com</a></li>
+          <li>Phone: <a href="tel:+1234567890" class="hover:text-red-400">+1 234 567 890</a></li>
+          <li>Address: 123 Business Road, India</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4 text-gray-400 text-2xl">
+          <a href="#" class="hover:text-red-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-red-400"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-10">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+        <p>&copy; 2025 AA Plastics. All rights reserved.</p>
+        <p>Designed by <a href="https://inspirezesttechnologies.com/" class="text-gray-200">InspireZest Technologies Pvt
+            Ltd</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Scroll Navbar & Mobile Menu Slide -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBtn = document.getElementById('mobile-btn');
+
+    // Navbar scroll color switch
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.remove('bg-black/70', 'text-white');
+        navbar.classList.add('bg-white/90', 'text-black');
+        hamburgerIcon.classList.remove('text-white');
+        hamburgerIcon.classList.add('text-black');
+      } else {
+        navbar.classList.add('bg-black/70', 'text-white');
+        navbar.classList.remove('bg-white/90', 'text-black');
+        hamburgerIcon.classList.add('text-white');
+        hamburgerIcon.classList.remove('text-black');
+      }
+    });
+
+    // Slide-in Mobile Menu Toggle
+    let isOpen = false;
+    mobileBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+      }
+    });
+
+
+    // Close button inside mobile menu
+    const closeBtn = document.getElementById('close-btn');
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+      isOpen = false;
+    });
+
+  </script>
+</body>
+
+</html>

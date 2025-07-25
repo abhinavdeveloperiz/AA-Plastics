@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="relative bg-black text-white py-24 px-6 md:px-20 overflow-hidden">
+  <!-- Background Image with opacity using <img> -->
+  <img src="{% static 'images/service.webp' %}" alt="Services Background"
+       class="absolute inset-0 w-full h-full object-cover opacity-30 z-0 pointer-events-none" />
+
+  <!-- Content Layer -->
+  <div class="relative z-10 max-w-6xl mx-auto text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-yellow-400 mb-4" data-aos="fade-down">
+      Our <span class="text-white">Services</span>
+    </h1>
+    <p class="text-gray-300 max-w-2xl mx-auto text-lg" data-aos="fade-up">
+      At A.A. Plastics, we offer comprehensive solutions in plastic packaging — customized to your needs with precision, quality, and trust.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- Services List -->
+<section class="bg-gray-900 text-white py-20 px-6 md:px-20">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+    <!-- Service 1 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 border border-gray-700" data-aos="fade-up">
+      <div class="text-yellow-400 text-4xl mb-4">
+        <i class="fas fa-industry"></i>
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Custom Molding</h3>
+      <p class="text-gray-300 text-sm">
+        Tailored plastic molding for brands with unique requirements — from shape to finish.
+      </p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+      <div class="text-yellow-400 text-4xl mb-4">
+        <i class="fas fa-flask"></i>
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">PET & HDPE Bottling</h3>
+      <p class="text-gray-300 text-sm">
+        Manufacturing high-grade PET and HDPE bottles with durability and safety assurance.
+      </p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+      <div class="text-yellow-400 text-4xl mb-4">
+        <i class="fas fa-box-open"></i>
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Packaging Solutions</h3>
+      <p class="text-gray-300 text-sm">
+        From concept to delivery — we design packaging that enhances shelf presence and function.
+      </p>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 border border-gray-700" data-aos="fade-up">
+      <div class="text-yellow-400 text-4xl mb-4">
+        <i class="fas fa-recycle"></i>
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Recyclable Products</h3>
+      <p class="text-gray-300 text-sm">
+        Eco-conscious products made using recyclable materials that support sustainability.
+      </p>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+      <div class="text-yellow-400 text-4xl mb-4">
+        <i class="fas fa-truck"></i>
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Bulk Order Fulfillment</h3>
+      <p class="text-gray-300 text-sm">
+        High-capacity production units to handle and deliver bulk orders with speed and quality.
+      </p>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+      <div class="text-yellow-400 text-4xl mb-4">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Product Innovation</h3>
+      <p class="text-gray-300 text-sm">
+        Our R&D team collaborates with clients to bring unique packaging ideas to life.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-black text-white py-20 px-6 md:px-20 relative">
+  <div class="absolute inset-0 bg-cover bg-center opacity-20 z-0"
+    style="background-image: url('https://images.unsplash.com/photo-1581090700227-1f9d2f61a0a6');"></div>
+  <div class="relative z-10 text-center max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6" data-aos="fade-up">Need Custom Packaging?</h2>
+    <p class="text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="100">
+      We bring your packaging concepts to life with precision engineering, expert consultation, and dedicated service.
+    </p>
+    <a href="{% url 'contact' %}"
+      class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-8 rounded-full transition duration-300"
+      data-aos="zoom-in">Get in Touch</a>
+  </div>
+</section>
+
+{% endblock %}
