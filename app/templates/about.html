@@ -1,103 +1,101 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
-<section class="relative bg-black text-white py-20 px-6 md:px-20">
+<!-- About Section -->
+<section class="relative bg-white text-gray-800 py-20 px-6 md:px-20">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
     <!-- Image Side -->
     <div class="w-full md:w-1/2">
-      <div class="relative rounded-lg overflow-hidden shadow-lg">
+      <div class="relative rounded-lg overflow-hidden shadow-xl">
         <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/380109068/ZI/EQ/RP/28146112/plastic-water-bottle-500x500.jpg"
              alt="A.A. Plastics Factory" class="w-full h-auto object-center" data-aos="fade-right" />
-        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-white/10"></div>
       </div>
     </div>
 
     <!-- Content Side -->
     <div class="w-full md:w-1/2 relative z-10">
-      <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 mb-6 text-red-500 hover:text-white"
+      <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-500 pl-4 mb-6 text-red-600 hover:text-gray-900"
           data-aos="fade-right">
-        About <span class="text-white hover:text-red-500">Us</span>
+        About <span class="text-gray-900 hover:text-red-600">Us</span>
       </h2>
-      <p class="text-justify leading-relaxed mb-4 text-gray-300">
+      <p class="text-justify leading-relaxed mb-4 text-gray-700">
         Established in <strong>…(year)…</strong>, A.A. Plastics has been a trusted name in the plastic manufacturing industry for nearly two decades.
         From day one, our journey has been marked by exceptional service, unwavering quality, and the incredible support of our valued customers — our extended brotherhood.
       </p>
-      <p class="text-justify leading-relaxed mb-4 text-gray-300">
+      <p class="text-justify leading-relaxed mb-4 text-gray-700">
         Our growth has been nothing short of phenomenal. Like a silkworm transforming into a magnificent butterfly, we have evolved from a humble beginning into a prominent force in the industry.
         The golden key to our success lies in our commitment to flexibility in customization, consistency in quality, and on-time delivery — every time.
       </p>
-     
 
-      <h3 class="mt-6 text-2xl font-bold text-yellow-400">A.A. Plastics — <span class="text-white">Crafted for Brands. Trusted for Quality.</span></h3>
+      <h3 class="mt-6 text-2xl font-bold text-yellow-600">A.A. Plastics — <span class="text-gray-900">Crafted for Brands. Trusted for Quality.</span></h3>
     </div>
   </div>
 </section>
 
-
-
 <!-- Vision & Mission Section -->
-<section class="bg-gray-900 text-white py-20 px-6 md:px-20">
+<section class="bg-yellow-50 text-gray-800 py-20 px-6 md:px-20">
   <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 inline-block text-red-500 hover:text-white">Our <span class="text-white hover:text-red-500">Vision & Mission</span></h2>
+    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-500 pl-4 inline-block text-red-600 hover:text-gray-900">Our <span class="text-gray-900 hover:text-red-600">Vision & Mission</span></h2>
   </div>
 
   <div class="grid md:grid-cols-2 gap-12">
-    <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-yellow-400 transition duration-300" data-aos="fade-up">
-      <h3 class="text-2xl font-semibold text-yellow-400 mb-4">Our Vision</h3>
-      <p class="text-gray-300 text-justify">
+    <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:border-yellow-500 transition duration-300" data-aos="fade-up">
+      <h3 class="text-2xl font-semibold text-yellow-600 mb-4">Our Vision</h3>
+      <p class="text-gray-700 text-justify">
         To be the most innovative and trusted plastic manufacturing brand in India, delivering premium-quality solutions that meet evolving market needs and exceed customer expectations.
       </p>
     </div>
 
-    <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-yellow-400 transition duration-300" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="text-2xl font-semibold text-yellow-400 mb-4">Our Mission</h3>
-      <p class="text-gray-300 text-justify">
+    <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:border-yellow-500 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-2xl font-semibold text-yellow-600 mb-4">Our Mission</h3>
+      <p class="text-gray-700 text-justify">
         To empower brands with customized, sustainable, and high-quality plastic packaging solutions, driven by innovation, state-of-the-art technology, and customer-first values.
       </p>
     </div>
   </div>
 </section>
 
-
 <!-- Journey Timeline -->
-<section class="bg-black text-white py-20 px-6 md:px-20">
+<section class="bg-white text-gray-800 py-20 px-6 md:px-20">
   <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 inline-block text-red-500 hover:text-white">
-      Our <span class="text-white hover:text-red-500">Journey</span>
+    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-500 pl-4 inline-block text-red-600 hover:text-gray-900">
+      Our <span class="text-gray-900 hover:text-red-600">Journey</span>
     </h2>
-    <p class="text-gray-400 mt-4 max-w-xl mx-auto">From humble beginnings to industry leadership — we’ve come a long way.</p>
+    <p class="text-gray-600 mt-4 max-w-xl mx-auto">From humble beginnings to industry leadership — we’ve come a long way.</p>
   </div>
 
   <div class="space-y-12 max-w-4xl mx-auto">
-    <div class="relative pl-8 border-l-4 border-yellow-400">
-      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-400 rounded-full"></div>
-      <h4 class="text-xl font-semibold text-yellow-300">Early Days</h4>
-      <p class="text-gray-300">Started with a small unit and a big dream — focused on quality and service since day one.</p>
+    <div class="relative pl-8 border-l-4 border-yellow-500">
+      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-500 rounded-full"></div>
+      <h4 class="text-xl font-semibold text-yellow-600">Early Days</h4>
+      <p class="text-gray-700">Started with a small unit and a big dream — focused on quality and service since day one.</p>
     </div>
-    <div class="relative pl-8 border-l-4 border-yellow-400">
-      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-400 rounded-full"></div>
-      <h4 class="text-xl font-semibold text-yellow-300">Rapid Expansion</h4>
-      <p class="text-gray-300">Invested in advanced molding machines, expanded team, and started bulk production for leading brands.</p>
+    <div class="relative pl-8 border-l-4 border-yellow-500">
+      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-500 rounded-full"></div>
+      <h4 class="text-xl font-semibold text-yellow-600">Rapid Expansion</h4>
+      <p class="text-gray-700">Invested in advanced molding machines, expanded team, and started bulk production for leading brands.</p>
     </div>
-    <div class="relative pl-8 border-l-4 border-yellow-400">
-      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-400 rounded-full"></div>
-      <h4 class="text-xl font-semibold text-yellow-300">Nationwide Reach</h4>
-      <p class="text-gray-300">Built trusted relationships with brands across India, recognized for quality and on-time delivery.</p>
+    <div class="relative pl-8 border-l-4 border-yellow-500">
+      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-500 rounded-full"></div>
+      <h4 class="text-xl font-semibold text-yellow-600">Nationwide Reach</h4>
+      <p class="text-gray-700">Built trusted relationships with brands across India, recognized for quality and on-time delivery.</p>
     </div>
-    <div class="relative pl-8 border-l-4 border-yellow-400">
-      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-400 rounded-full"></div>
-      <h4 class="text-xl font-semibold text-yellow-300">Future Forward</h4>
-      <p class="text-gray-300">Constantly innovating and adopting eco-friendly practices to serve the next generation of brands.</p>
+    <div class="relative pl-8 border-l-4 border-yellow-500">
+      <div class="absolute -left-4 top-1.5 w-3 h-3 bg-yellow-500 rounded-full"></div>
+      <h4 class="text-xl font-semibold text-yellow-600">Future Forward</h4>
+      <p class="text-gray-700">Constantly innovating and adopting eco-friendly practices to serve the next generation of brands.</p>
     </div>
   </div>
 </section>
 
 <!-- Sustainability -->
-<section class="bg-gray-100 text-black py-20 px-6 md:px-20">
+<section class="bg-yellow-100 text-gray-800 py-20 px-6 md:px-20">
   <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-400 pl-4 inline-block text-red-500 hover:text-black">
-      Our <span class="text-black hover:text-red-500">Sustainability Promise</span>
+    <h2 class="text-3xl md:text-5xl font-bold border-l-4 border-yellow-500 pl-4 inline-block text-red-600 hover:text-gray-900">
+      Our <span class="text-gray-900 hover:text-red-600">Sustainability Promise</span>
     </h2>
     <p class="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
       At A.A. Plastics, we believe great packaging doesn’t have to come at the cost of the planet.
@@ -105,11 +103,11 @@
   </div>
 
   <div class="grid md:grid-cols-2 gap-12">
-    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-300 hover:border-yellow-400 transition" data-aos="fade-up">
+    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-300 hover:border-yellow-500 transition" data-aos="fade-up">
       <h3 class="text-xl font-bold text-yellow-600 mb-2">Eco-Conscious Manufacturing</h3>
       <p>We actively use recycled and recyclable materials to reduce our environmental footprint and promote green practices.</p>
     </div>
-    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-300 hover:border-yellow-400 transition" data-aos="fade-up" data-aos-delay="100">
+    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-300 hover:border-yellow-500 transition" data-aos="fade-up" data-aos-delay="100">
       <h3 class="text-xl font-bold text-yellow-600 mb-2">Energy Efficient Operations</h3>
       <p>Our facility uses energy-efficient machinery to lower emissions and maintain responsible resource usage.</p>
     </div>
