@@ -123,7 +123,6 @@
       <!-- Logo -->
       <a href="{% url 'home' %}" class="flex-shrink-0">
         <img src="{% static 'images/logo.png' %}" class="h-16" alt="AA Plastics Logo" />
-        <p class="mx-auto flex justify-center">A A Plastics</p>
       </a>
 
       <!-- Right Nav -->
@@ -145,7 +144,7 @@
   <!-- Slide-in Mobile Menu -->
   <!-- Slide-in Mobile Menu -->
   <div id="mobile-menu"
-    class="fixed top-0 right-0 h-full w-64 bg-black text-black z-[999] transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col pt-10 space-y-6 px-6">
+    class="fixed top-0 right-0 h-full w-64 bg-black text-white z-[999] transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col pt-10 space-y-6 px-6">
 
     <!-- Close Button -->
     <button id="close-btn" class="absolute top-8 right-4 text-white text-2xl hover:text-red-400 transition">
@@ -162,7 +161,7 @@
 
 
   <!-- Floating Buttons -->
-  <div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
+  <div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50" data-aos="slide-up" data-aos-duration="2000">
     <!-- WhatsApp -->
     <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
       class="bg-green-500 text-white rounded-2xl p-4 shadow-lg hover:bg-green-600 transition animate-pulse">
