@@ -7,6 +7,23 @@
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
   }
 
+  /* banner animation  */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
   .floating-animation {
     animation: float 6s ease-in-out infinite;
   }
@@ -136,45 +153,49 @@
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
   <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen overflow-hidden gradient-bg">
-    <!-- Background Image using <img> -->
-    <img src="{% static 'images/service.webp' %}" alt="Background"
+  <section id="home" class="relative min-h-screen overflow-hidden gradient-bg flex items-center mt-28">
+    <!-- Background Image -->
+    <img src="{% static 'images/banner.jpg' %}" alt="Background"
       class="absolute inset-0 w-full h-full object-cover opacity-50 z-0 pointer-events-none" />
 
+    <!-- Top Right Badge -->
+    <div
+      class="absolute top-8 right-10 bg-red-600 text-white px-6 py-2 rounded-full shadow-lg font-semibold text-sm z-20">
+      Since 2005
+    </div>
+
     <!-- Floating Elements -->
-    <div class="absolute top-20 left-10 w-16 h-16 bg-red-100 rounded-full floating-animation opacity-60 z-10"></div>
-    <div class="absolute top-40 right-20 w-12 h-12 bg-blue-100 rounded-full floating-delayed opacity-60 z-10"></div>
-    <div class="absolute bottom-40 left-20 w-20 h-20 bg-yellow-100 rounded-full floating-animation opacity-60 z-10">
+    <div class="absolute top-24 left-10 w-16 h-16 bg-red-100 rounded-full floating-animation opacity-60 z-10"></div>
+    <div class="absolute top-48 right-20 w-12 h-12 bg-blue-100 rounded-full floating-delayed opacity-60 z-10"></div>
+    <div class="absolute bottom-32 left-24 w-20 h-20 bg-yellow-100 rounded-full floating-animation opacity-60 z-10">
     </div>
 
     <!-- Main Content -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-20 py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-20 py-32 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         <!-- Left Content -->
-        <div class="space-y-8">
-          <div class="space-y-6">
-            <div class="brand-badge inline-block text-sm font-semibold text-red-600 bg-red-100 px-4 py-1 rounded-full">
-              Premium Plastic Manufacturing Since 2005
-            </div>
-
-            <div class="space-y-4">
-              <h1 class="text-5xl md:text-7xl font-bold leading-tight text-gray-900">
-                Crafted for <span class="block text-red-600">Brands</span>
-              </h1>
-              <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-red-400"></div>
-            </div>
-
-            <p class="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
-              Trusted for <span class="font-semibold text-gray-900">Quality</span>,
-              Built for <span class="font-semibold text-gray-900">Excellence</span>
-            </p>
-
-            <p class="text-lg text-gray-600 max-w-lg leading-relaxed">
-              Manufacturing premium PET bottles, HDPE containers, and custom plastic solutions with precision
-              engineering and unwavering commitment to quality.
-            </p>
+        <div class="space-y-10" data-aos="fade-right">
+          <div class="inline-block text-sm font-semibold text-red-600 bg-red-100 px-5 py-2 rounded-full">
+            Premium Plastic Manufacturing Since 2005
           </div>
+
+          <div class="space-y-5">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-gray-900">
+              Crafted for <span class="block text-red-600">Brands</span>
+            </h1>
+            <div class="w-28 h-1 bg-gradient-to-r from-red-600 to-red-400"></div>
+          </div>
+
+          <p class="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
+            Trusted for <span class="font-semibold text-gray-900">Quality</span>, Built for
+            <span class="font-semibold text-gray-900">Excellence</span>.
+          </p>
+
+          <p class="text-lg text-gray-600 max-w-lg leading-relaxed">
+            Manufacturing premium PET bottles, HDPE containers, and custom plastic solutions with precision engineering
+            and unwavering commitment to quality.
+          </p>
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4">
@@ -191,59 +212,50 @@
           </div>
 
           <!-- Stats -->
-          <div class="grid grid-cols-3 gap-8 pt-8">
+          <div class="grid grid-cols-3 gap-8 pt-10">
             <div class="text-center">
-              <div class="text-3xl font-bold text-red-600 number-counter">15+</div>
+              <div class="text-3xl md:text-4xl font-bold text-red-600">15+</div>
               <div class="text-sm text-gray-600">Years Experience</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold text-red-600 number-counter">500+</div>
+              <div class="text-3xl md:text-4xl font-bold text-red-600">500+</div>
               <div class="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold text-red-600 number-counter">1M+</div>
+              <div class="text-3xl md:text-4xl font-bold text-red-600">1M+</div>
               <div class="text-sm text-gray-600">Products Made</div>
             </div>
           </div>
         </div>
 
         <!-- Right Visual -->
-        <div class="relative flex justify-center items-center">
-          <!-- Background Circles -->
-          <div
-            class="absolute w-96 h-96 bg-gradient-to-br from-red-100 to-red-50 rounded-full -z-10 floating-animation">
-          </div>
-          <div class="absolute w-80 h-80 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full -z-10 floating-delayed"
-            style="transform: translate(40px, 40px);"></div>
+        <div class="flex flex-col items-center justify-center text-center space-y-4" data-aos="fade-down">
+          <!-- Logo -->
+          <img src="{% static 'images/logo.png' %}" alt="AA Plastics Logo" class="w-100 animate-float drop-shadow-2xl" />
 
-          <!-- Product Image -->
-          <div class="relative animate-bounce">
-            <img
-              src="https://media.istockphoto.com/id/494501198/photo/buying-bottle-of-water.jpg?s=612x612&w=0&k=20&c=Cxut2vABifKlzXCRXH5o37gXBXRE5fcA4yve2IwjRgs="
-              alt="Premium PET Bottles"
-              class="hero-bottle w-80 h-80 object-cover rounded-full border-8 border-white shadow-2xl" />
+          <!-- Company Name -->
+          <p class="text-2xl md:text-3xl font-bold text-gray-900">AA Plastics</p>
 
-            <!-- Badge -->
-            <div
-              class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 glass-card px-6 py-3 rounded-full shadow-lg bg-white/70 backdrop-blur-sm">
-              <div class="text-center">
-                <div class="text-sm font-bold text-gray-900">Premium Quality</div>
-                <div class="text-xs text-gray-600">PET • HDPE • Custom</div>
-              </div>
-            </div>
-          </div>
+          <!-- Tagline -->
+          <p class="text-lg md:text-xl text-black" style="font-family:sans-serif;">
+            Crafted For <span class="font-semibold text-red-600">Brands</span>.
+            Trusted For <span class="font-semibold text-red-600">Quality</span>.
+          </p>
         </div>
+
+
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-        <div class="scroll-indicator text-gray-400">
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+        <div class="animate-bounce text-gray-500">
           <i class="fas fa-chevron-down text-2xl"></i>
         </div>
         <div class="text-sm text-gray-500 mt-2">Scroll to explore</div>
       </div>
     </div>
   </section>
+
 
 
   <!-- About Section -->

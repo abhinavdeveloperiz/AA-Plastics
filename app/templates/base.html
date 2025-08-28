@@ -26,6 +26,64 @@
 
 </head>
 
+
+<style>
+  /* Full screen loader wrapper */
+  #loader {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  /* ========== Uiverse.io Loader (bociKond) ========== */
+  .loader {
+    width: 44.8px;
+    height: 44.8px;
+    color: #cd1e1e;
+    /* Change this to match your theme */
+    position: relative;
+    background: radial-gradient(11.2px, currentColor 94%, #0000);
+    margin-top: 15px;
+    /* space below logo */
+  }
+
+  .loader:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(10.08px at bottom right, #0000 94%, currentColor) top left,
+      radial-gradient(10.08px at bottom left, #0000 94%, currentColor) top right,
+      radial-gradient(10.08px at top right, #0000 94%, currentColor) bottom left,
+      radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
+    background-size: 22.4px 22.4px;
+    background-repeat: no-repeat;
+    animation: loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+  }
+
+  @keyframes loader {
+    33% {
+      inset: -11.2px;
+      transform: rotate(0deg);
+    }
+
+    66% {
+      inset: -11.2px;
+      transform: rotate(90deg);
+    }
+
+    100% {
+      inset: 0;
+      transform: rotate(90deg);
+    }
+  }
+</style>
+
 <style>
   body {
     font-family: 'Poppins', 'Roboto', sans-serif;
@@ -36,11 +94,23 @@
   }
 </style>
 
-<body class="pt-[95px] bg-white text-black overflow-x-hidden">
+<body class="bg-white text-black overflow-x-hidden">
+
+
+  <!-- loader  -->
+
+  <div id="loader">
+    <!-- Logo -->
+    <img src="{% static 'images/logo.png' %}" alt="Logo" style="width:120px;">
+    <!-- Custom Loader -->
+    <div class="loader"></div>
+  </div>
+
+
 
   <!-- Navbar -->
   <header id="navbar"
-    class="fixed top-0 left-0 w-full z-50 bg-black/70 text-white shadow-md transition-all duration-300">
+    class="fixed top-0 left-0 w-full z-50 bg-white/70 text-black shadow-md transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
 
       <!-- Left Nav -->
@@ -53,6 +123,7 @@
       <!-- Logo -->
       <a href="{% url 'home' %}" class="flex-shrink-0">
         <img src="{% static 'images/logo.png' %}" class="h-16" alt="AA Plastics Logo" />
+        <p class="mx-auto flex justify-center">A A Plastics</p>
       </a>
 
       <!-- Right Nav -->
@@ -65,7 +136,7 @@
       <!-- Mobile Toggle -->
       <div class="md:hidden">
         <button id="mobile-btn">
-          <i id="hamburger-icon" class="fas fa-bars text-white text-2xl transition"></i>
+          <i id="hamburger-icon" class="fas fa-bars text-black text-3xl transition"></i>
         </button>
       </div>
     </div>
@@ -74,7 +145,7 @@
   <!-- Slide-in Mobile Menu -->
   <!-- Slide-in Mobile Menu -->
   <div id="mobile-menu"
-    class="fixed top-0 right-0 h-full w-64 bg-black text-white z-[999] transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col pt-10 space-y-6 px-6">
+    class="fixed top-0 right-0 h-full w-64 bg-black text-black z-[999] transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col pt-10 space-y-6 px-6">
 
     <!-- Close Button -->
     <button id="close-btn" class="absolute top-8 right-4 text-white text-2xl hover:text-red-400 transition">
@@ -94,12 +165,13 @@
   <div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
     <!-- WhatsApp -->
     <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
-      class="bg-green-500 text-white rounded-2xl p-4 shadow-lg hover:bg-green-600 transition">
+      class="bg-green-500 text-white rounded-2xl p-4 shadow-lg hover:bg-green-600 transition animate-pulse">
       <i class="fab fa-whatsapp text-xl"></i>
     </a>
 
     <!-- Call -->
-    <a href="tel:+919876543210" class="bg-blue-500 text-white rounded-2xl p-4 shadow-lg hover:bg-blue-600 transition">
+    <a href="tel:+919876543210"
+      class="bg-blue-500 text-white rounded-2xl p-4 shadow-lg hover:bg-blue-600 transition animate-pulse">
       <i class="fas fa-phone-alt text-xl"></i>
     </a>
   </div>
@@ -146,7 +218,8 @@
       <div
         class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
         <p>&copy; 2025 AA Plastics. All rights reserved.</p>
-        <p>Designed by <a href="https://inspirezesttechnologies.com/" target="_blank"  class="text-gray-200">InspireZest Technologies Pvt
+        <p>Designed by <a href="https://inspirezesttechnologies.com/" target="_blank" class="text-gray-200">InspireZest
+            Technologies Pvt
             Ltd</a></p>
       </div>
     </div>
@@ -154,7 +227,11 @@
 
   <!-- AOS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init({
+      once: true // Animation happens only once when scrolling
+    });
+  </script>
 
   <!-- Scroll Navbar & Mobile Menu Slide -->
   <script>
@@ -163,20 +240,7 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileBtn = document.getElementById('mobile-btn');
 
-    // Navbar scroll color switch
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        navbar.classList.remove('bg-black/70', 'text-white');
-        navbar.classList.add('bg-white/90', 'text-black');
-        hamburgerIcon.classList.remove('text-white');
-        hamburgerIcon.classList.add('text-black');
-      } else {
-        navbar.classList.add('bg-black/70', 'text-white');
-        navbar.classList.remove('bg-white/90', 'text-black');
-        hamburgerIcon.classList.add('text-white');
-        hamburgerIcon.classList.remove('text-black');
-      }
-    });
+
 
     // Slide-in Mobile Menu Toggle
     let isOpen = false;
@@ -202,6 +266,17 @@
     });
 
   </script>
+
+
+  <script>
+    // Hide loader once page fully loads
+    window.addEventListener("load", function () {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").classList.remove("d-none");
+    });
+  </script>
+
+
 </body>
 
 </html>

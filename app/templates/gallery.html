@@ -5,7 +5,7 @@
 <!-- Gallery Section (Light Theme) -->
 <section class="relative bg-gray-200 text-black py-24 px-6 md:px-20 overflow-hidden">
   <img src="{% static 'images/service.webp' %}" class="absolute inset-0 w-full h-full object-cover opacity-10 z-0" alt="Gallery Background" />
-  <div class="relative z-10 max-w-6xl mx-auto text-center">
+  <div class="relative z-10 max-w-6xl mx-auto text-center mt-16">
     
     <!-- Heading -->
     <h2 class="text-4xl md:text-6xl font-bold text-red-500 mb-4" data-aos="fade-down">
@@ -16,7 +16,7 @@
     </p>
 
     <!-- Image Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" data-aos="fade-right" data-aos-delay="200">
       {% for image in image %}
       <div class="rounded-xl overflow-hidden shadow-md bg-white hover:shadow-red-200 transition duration-300 transform hover:scale-105">
         <img src="{{ image.image.url }}" alt="Gallery Image" class="w-full h-64 object-cover">
