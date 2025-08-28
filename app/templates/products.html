@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
 
-<!-- Products Section (Light Theme) -->
 <section class="relative bg-gray-100 text-black py-24 px-6 md:px-20 mt-16">
   <div class="relative z-10 max-w-6xl mx-auto text-center">
     <h2 class="text-4xl md:text-6xl font-bold text-black mb-4" data-aos="fade-down">
@@ -15,7 +14,8 @@
     <!-- Products Grid -->
     <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
       {% for product in products %}
-      <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-red-200 hover:scale-105 transform transition duration-300">
+      <div onclick="openModal('{{ product.name }}')" 
+           class="cursor-pointer bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-red-200 hover:scale-105 transform transition duration-300">
         <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-48 object-contain mb-4 rounded-lg bg-gray-50">
         <h3 class="text-xl font-bold text-red-500 mb-2">{{ product.name }}</h3>
         <p class="text-gray-700 text-sm">{{ product.description }}</p>
@@ -24,5 +24,46 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white w-11/12 md:w-1/2 lg:w-1/3 rounded-2xl shadow-lg p-6 relative animate-fadeIn">
+    <!-- Close Button -->
+    <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-5xl">&times;</button>
+
+    <h3 id="modalTitle" class="text-2xl font-bold text-red-500 mb-4"></h3>
+
+    <div class="space-y-4 text-left text-gray-700">
+      <p><span class="font-semibold">{{ product.name }}</span> <br>
+        • Till 200ml: 25mm <br>
+        • 375ml, 450ml: 28mm <br>
+        • Till 2700ml: 28mm <br>
+        • 3000ml, 5000ml: 46mm
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(productName) {
+    document.getElementById("modalTitle").innerText = productName;
+    document.getElementById("productModal").classList.remove("hidden");
+  }
+
+  function closeModal() {
+    document.getElementById("productModal").classList.add("hidden");
+  }
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+</style>
+
 
 {% endblock %}
